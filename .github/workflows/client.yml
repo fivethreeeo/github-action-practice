@@ -1,3 +1,4 @@
+
 name: client
 on:
   push:
@@ -24,7 +25,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_EC2_METADATA_DISABLED: true
         run: |
-          aws s3 sync ./my-agora-states-client/build \
+          aws s3 sync \
             --region ap-northeast-2 \
             build s3://fe-113-sangbeomheo \
             --delete
