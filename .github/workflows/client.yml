@@ -26,6 +26,6 @@ jobs:
         run: |
           aws s3 sync cp \
             --region ap-northeast-2 \
-            build s3://fe-113-sangbeomheo \
+            build s3://fe-113-sangbeomheo-s3 \
             --delete
         working-directory: ./my-agora-states-client/build
